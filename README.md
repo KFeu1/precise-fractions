@@ -63,7 +63,7 @@ f1.add(f(3)); // If the denominator is omitted, it becomes 1 by default.
 console.log(f.toString()) // Outputs 11 / 3
 ```
 
-If you want to get the value of a fraction as a number, just cast is as such:
+If you want to get the value of a fraction as a number, just cast it as such:
 
 ```ts
 const f1 = f(2,3);
