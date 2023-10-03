@@ -2,12 +2,12 @@ import { createSignal } from 'solid-js'
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { createFraction, power, add } from '../lib/main';
+import { createFraction, power, add, Fraction } from '../lib/main';
 
 function App() {
   const [count, setCount] = createSignal(0);
 
-  const f = createFraction(2,3);
+  const f = new Fraction(2,3);
 
   f.power(3);
 

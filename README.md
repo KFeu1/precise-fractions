@@ -30,6 +30,14 @@ const myFraction = f(2n,3n);
 const myFraction = f(2n,"3");
 ```
 
+or by importing the fraction class:
+
+```ts
+import { Fraction } from 'fraction';
+
+const f = new Fraction(2,3);
+```
+
 Use any of the provided operations:
 - add
 - subtract
