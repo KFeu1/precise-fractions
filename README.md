@@ -16,7 +16,7 @@ yarn add precise-fractions
 
 Import the package
 ```ts
-import { createFraction as f } from 'fraction';
+import { createFraction as f } from 'precise-fractions';
 ```
 
 Create a fraction
@@ -31,7 +31,7 @@ const myFraction = f(2n,"3");
 or by importing the fraction class:
 
 ```ts
-import { Fraction } from 'fraction';
+import { Fraction } from 'precise-fractions';
 
 const f = new Fraction(2,3);
 ```
@@ -46,7 +46,7 @@ Use any of the provided operations:
 by either importing them from the package, or directly on the fraction, but this will alter the fraction you are calling the method with:
 
 ```ts
-import { add } from 'fraction';
+import { add } from 'precise-fractions';
 const f1 = f(2,3);
 const f2 = f(3,4);
 const summedFraction = add(f1,f2);
