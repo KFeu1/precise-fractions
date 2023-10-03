@@ -17,14 +17,14 @@ devDependencies:
     specifier: ^5.2.2
     version: 5.2.2
   vite:
-    specifier: ^4.4.9
-    version: 4.4.9(@types/node@20.8.2)
+    specifier: ^4.4.10
+    version: 4.4.10(@types/node@20.8.2)
   vite-plugin-dts:
     specifier: ^3.6.0
-    version: 3.6.0(@types/node@20.8.2)(typescript@5.2.2)(vite@4.4.9)
+    version: 3.6.0(@types/node@20.8.2)(typescript@5.2.2)(vite@4.4.10)
   vite-plugin-solid:
     specifier: ^2.7.0
-    version: 2.7.0(solid-js@1.7.12)(vite@4.4.9)
+    version: 2.7.0(solid-js@1.7.12)(vite@4.4.10)
 
 packages:
 
@@ -848,7 +848,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001543
-      electron-to-chromium: 1.4.539
+      electron-to-chromium: 1.4.540
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: true
@@ -911,8 +911,8 @@ packages:
       ms: 2.1.2
     dev: true
 
-  /electron-to-chromium@1.4.539:
-    resolution: {integrity: sha512-wRmWJ8F7rgmINuI32S6r2SLrw/h/bJQsDSvBiq9GBfvc2Lh73qTOwn73r3Cf67mjVgFGJYcYtmERzySa5jIWlg==}
+  /electron-to-chromium@1.4.540:
+    resolution: {integrity: sha512-aoCqgU6r9+o9/S7wkcSbmPRFi7OWZWiXS9rtjEd+Ouyu/Xyw5RSq2XN8s5Qp8IaFOLiRrhQCphCIjAxgG3eCAg==}
     dev: true
 
   /esbuild@0.18.20:
@@ -984,10 +984,6 @@ packages:
     dev: true
     optional: true
 
-  /function-bind@1.1.1:
-    resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
-    dev: true
-
   /gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -1007,11 +1003,9 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /has@1.0.3:
-    resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
+  /has@1.0.4:
+    resolution: {integrity: sha512-qdSAmqLF6209RFj4VVItywPMbm3vWylknmB3nvNiUIs72xAimcM8nVYxYr7ncvZq5qzk9MKIZR8ijqD/1QuYjQ==}
     engines: {node: '>= 0.4.0'}
-    dependencies:
-      function-bind: 1.1.1
     dev: true
 
   /he@1.2.0:
@@ -1031,7 +1025,7 @@ packages:
   /is-core-module@2.13.0:
     resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
-      has: 1.0.3
+      has: 1.0.4
     dev: true
 
   /is-what@4.1.15:
@@ -1299,7 +1293,7 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-plugin-dts@3.6.0(@types/node@20.8.2)(typescript@5.2.2)(vite@4.4.9):
+  /vite-plugin-dts@3.6.0(@types/node@20.8.2)(typescript@5.2.2)(vite@4.4.10):
     resolution: {integrity: sha512-doxhDRFJCZD2sGjIp4V800nm8Y19GvmwckjG5vYPuiqJ7OBjc9NlW1Vp9Gkyh2aXlUs1jTDRH/lxWfcsPLOQHg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1315,7 +1309,7 @@ packages:
       debug: 4.3.4
       kolorist: 1.8.0
       typescript: 5.2.2
-      vite: 4.4.9(@types/node@20.8.2)
+      vite: 4.4.10(@types/node@20.8.2)
       vue-tsc: 1.8.15(typescript@5.2.2)
     transitivePeerDependencies:
       - '@types/node'
@@ -1323,7 +1317,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-solid@2.7.0(solid-js@1.7.12)(vite@4.4.9):
+  /vite-plugin-solid@2.7.0(solid-js@1.7.12)(vite@4.4.10):
     resolution: {integrity: sha512-avp/Jl5zOp/Itfo67xtDB2O61U7idviaIp4mLsjhCa13PjKNasz+IID0jYTyqUp9SFx6/PmBr6v4KgDppqompg==}
     peerDependencies:
       solid-js: ^1.7.2
@@ -1336,14 +1330,14 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.7.12
       solid-refresh: 0.5.3(solid-js@1.7.12)
-      vite: 4.4.9(@types/node@20.8.2)
-      vitefu: 0.2.4(vite@4.4.9)
+      vite: 4.4.10(@types/node@20.8.2)
+      vitefu: 0.2.4(vite@4.4.10)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.4.9(@types/node@20.8.2):
-    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
+  /vite@4.4.10(@types/node@20.8.2):
+    resolution: {integrity: sha512-TzIjiqx9BEXF8yzYdF2NTf1kFFbjMjUSV0LFZ3HyHoI3SGSPLnnFUKiIQtL3gl2AjHvMrprOvQ3amzaHgQlAxw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -1378,7 +1372,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitefu@0.2.4(vite@4.4.9):
+  /vitefu@0.2.4(vite@4.4.10):
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -1386,7 +1380,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.9(@types/node@20.8.2)
+      vite: 4.4.10(@types/node@20.8.2)
     dev: true
 
   /vue-template-compiler@2.7.14:

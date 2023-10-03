@@ -1,19 +1,17 @@
-# **NOT YET ON NPM**
-
 # What this library does
-It allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations.
+It allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations - instead of converting decimals. Also, the precision level is arbitrarily large if you use bigints or strings when creating a fraction.
 
 ## Usage
 
 Add the package with npm, yarn, pnpm, or bun.
 ```bash
-npm i @KFeu1/fraction
+npm i precise-fractions
 # or
-pnpm add @KFeu1/fraction
+pnpm add precise-fractions
 # or
-bun add @KFeu1/fraction
+bun add precise-fractions
 # or
-yarn add @KFeu1/fraction
+yarn add precise-fractions
 ```
 
 Import the package
