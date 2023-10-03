@@ -6,10 +6,17 @@
   "type": "module",
   "license": "MIT",
   "main": "dist/fraction.js",
+  "types": "dist/index.d.ts",
   "declaration": true,
   "files": [
     "dist/*"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/fraction.js",
+      "require": "./dist/fraction.umd.cjs"
+    }
+  },
   "description": "Allows for working with fractions.",
   "scripts": {
     "dev": "vite",
