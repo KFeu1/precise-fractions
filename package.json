@@ -2,7 +2,7 @@
   "name": "precise-fractions",
   "private": false,
   "author": "Konstantin Feuerborn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "license": "MIT",
   "main": "dist/precise-fractions.js",
@@ -24,9 +24,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.7.12"
   },
   "devDependencies": {
+    "solid-js": "^1.7.12",
     "@types/node": "^20.8.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.10",
