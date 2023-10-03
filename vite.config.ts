@@ -20,6 +20,11 @@ export default defineConfig({
   },
 })
 
+/**
+ * Custom plugin to remove doc comments from bundle
+ *
+ * @returns
+ */
 function removeDocs() {
   return {
     name: 'remove-docs',
@@ -46,9 +51,7 @@ function removeDocs() {
             }
           }
 
-          const res = out.join("\n");
-          console.log("res", res)
-          return res;
+          return out.join("\n");
         }
 
 
