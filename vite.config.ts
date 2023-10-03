@@ -30,7 +30,7 @@ function removeDocs() {
     name: 'remove-docs',
 
     transform(src, id) {
-      if (/\.ts/.test(id)) {
+      if (/\.ts$/.test(id)) {
         const rm = (js) => {
           const lines = js.split(/\r?\n/);
 
