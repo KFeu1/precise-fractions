@@ -26,6 +26,10 @@ class Fraction {
     valueOf() {
         return Number(this.numerator) / Number(this.denominator);
     }
+
+    toString() {
+        return `(${this.numerator} / ${this.denominator})`;
+    }
 }
 
 /**
