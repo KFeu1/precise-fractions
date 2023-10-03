@@ -2,15 +2,18 @@ import { createSignal } from 'solid-js'
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { createFraction, power, add, Fraction } from '../lib/main';
+import { createFraction, power, add, Fraction, multiply } from '../lib/main';
 
 function App() {
   const [count, setCount] = createSignal(0);
 
   const f = new Fraction(2,3);
+  const g = new Fraction(4,3);
+  const h = new Fraction(2,3);
 
-  f.power(3);
 
+  console.log(`${multiply(f,g,h)}`);
+  f.multiply(2,2);
   console.log(`${f}`);
 
   return (

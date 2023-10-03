@@ -50,15 +50,12 @@ export class Fraction {
     }
 
     /**
-     * Add another fraction or value to the caller
+     * Add one ore more fractions or valuee to the caller
      *
      * @param f Fraction | bigint | number | string
      */
-    add(f: Fraction | bigint | number | string) {
-        if (!(f instanceof Fraction)) {
-            f = new Fraction(f);
-        }
-        const newFraction = addF(this, f);
+    add(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
+        const newFraction = addF(this, ...fractions);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
     }
@@ -78,15 +75,12 @@ export class Fraction {
     }
 
     /**
-     * Multiply by another fraction or value
+     * Multiply one ore more fractions or values
      *
      * @param f Fraction | bigint | number | string
      */
-    multiply(f: Fraction | bigint | number | string) {
-        if (!(f instanceof Fraction)) {
-            f = new Fraction(f);
-        }
-        const newFraction = multiplyF(this, f);
+    multiply(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
+        const newFraction = multiplyF(this, ...fractions);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
     }
