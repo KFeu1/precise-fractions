@@ -52,7 +52,7 @@ export class Fraction {
     /**
      * Add one ore more fractions or valuee to the caller
      *
-     * @param f Fraction | bigint | number | string
+     * @param fractions Array with at least 1 of type Fraction | bigint | number | string
      */
     add(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
         const newFraction = addF(this, ...fractions);
@@ -77,7 +77,7 @@ export class Fraction {
     /**
      * Multiply one ore more fractions or values
      *
-     * @param f Fraction | bigint | number | string
+     * @param fractions Array with at least 1 of type Fraction | bigint | number | string
      */
     multiply(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
         const newFraction = multiplyF(this, ...fractions);

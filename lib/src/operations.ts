@@ -29,7 +29,7 @@ function lcm(a: bigint, b: bigint) {
 /**
  * Add two or more fractions
  *
- * @param fractions Array of fractions
+ * @param fractions Array with at least 1 of type Fraction | bigint | number | string
  * @returns
  */
 function add(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
@@ -76,7 +76,7 @@ function subtract(f1: Fraction, f2: Fraction) {
 /**
  * Multiply two or more fractions
  *
- * @param fractions
+ * @param fractions Array with at least 1 of type Fraction | bigint | number | string
  * @returns
  */
 function multiply(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
