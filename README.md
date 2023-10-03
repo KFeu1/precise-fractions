@@ -1,7 +1,20 @@
+# **NOT YET ON NPM**
+
 # What this library does
 It allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations.
 
 ## Usage
+
+Add the package with npm, yarn, pnpm, or bun.
+```bash
+npm i @KFeu1/fraction
+# or
+pnpm add @KFeu1/fraction
+# or
+bun add @KFeu1/fraction
+# or
+yarn add @KFeu1/fraction
+```
 
 Import the package
 ```ts
@@ -39,6 +52,7 @@ const f1 = f(2,3);
 f1.add(3)
 // or
 f1.add(f(3)); // If the denominator is omitted, it becomes 1 by default.
+console.log(f.toString()) // Outputs 11 / 3
 ```
 
 If you want to get the value of a fraction as a number, just cast is as such:
