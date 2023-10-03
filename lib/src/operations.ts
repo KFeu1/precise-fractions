@@ -1,36 +1,4 @@
-
-/**
- * Represents a fraction with numerator and denominator
- *
- * Cast it to a number to get the fractional value as a Javascript number type
- */
-class Fraction {
-    numerator: bigint;
-    denominator: bigint;
-
-    constructor(numerator: bigint | number | string, denominator?: bigint | number | string) {
-        if (typeof numerator !== "bigint") {
-            numerator = BigInt(numerator);
-        }
-        if (typeof denominator !== "bigint") {
-            denominator = BigInt(denominator || 1);
-        }
-
-        // Make both numerator and denominator as small as possible
-        const gcdValue = gcd(numerator, denominator);
-
-        this.numerator = numerator / gcdValue;
-        this.denominator = denominator / gcdValue;
-    }
-
-    valueOf() {
-        return Number(this.numerator) / Number(this.denominator);
-    }
-
-    toString() {
-        return `(${this.numerator} / ${this.denominator})`;
-    }
-}
+import { Fraction } from "./fraction-class";
 
 /**
  * Create a new fraction.
@@ -112,7 +80,7 @@ function divide(f1: Fraction, f2: Fraction) {
 }
 
 /**
- * Take a fraction to a power
+ * Raise a fraction to a power
  *
  * @param f Fraction
  * @param power Exponent
@@ -132,4 +100,6 @@ export {
     multiply,
     divide,
     power,
+    gcd,
+    lcm,
 };

@@ -9,7 +9,9 @@ function App() {
 
   const f = createFraction(2,3);
 
-  console.log(`${power(f,3)}`);
+  f.power(3);
+
+  console.log(`${f}`);
 
   return (
     <>
