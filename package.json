@@ -6,6 +6,7 @@
   "type": "module",
   "license": "MIT",
   "main": "dist/fraction.js",
+  "declaration": true,
   "files": [
     "dist/*"
   ],
@@ -22,6 +23,11 @@
     "@types/node": "^20.8.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0",
     "vite-plugin-solid": "^2.7.0"
-  }
+  },
+  "keywords": [
+    "Javascript",
+    "Fractions"
+  ]
 }
