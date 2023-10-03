@@ -37,5 +37,9 @@
     "Javascript",
     "Precise",
     "Fractions"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KFeu1/precise-fractions"
+  }
 }
