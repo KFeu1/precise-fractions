@@ -1,28 +1,57 @@
+# What this library does
+It allows you to work with fractions, and keep their nominator and denominator values.
+
 ## Usage
 
-```bash
-$ npm install # or pnpm install or yarn install
+Import the package
+```ts
+import { createFraction as f } from 'fraction';
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Create a fraction
+```ts
+// The fraction can be initialized with numbers, strings and bigints
+const myFraction = f(2,3);
+const myFraction = f("2","3");
+const myFraction = f(2n,3n);
+const myFraction = f(2n,"3");
+```
 
-## Available Scripts
+Use any of the provided operations:
+- add
+- subtract
+- multiply
+- divide
+- power
 
-In the project directory, you can run:
+by either importing them from the package, or directly on the fraction, but this will alter the fraction you are calling the method with:
 
-### `npm run dev`
+```ts
+import { add } from 'fraction';
+const f1 = f(2,3);
+const f2 = f(3,4);
+const summedFraction = add(f1,f2);
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+or to alter the caller-fraction
+```ts
+const f1 = f(2,3);
+f1.add(3)
+// or
+f1.add(f(3)); // If the denominator is omitted, it becomes 1 by default.
+```
 
-### `npm run build`
+If you want to get the value of a fraction as a number, just cast is as such:
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+```ts
+const f1 = f(2,3);
+console.log(+f1) // Outputs 0.6666666666666666
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+You can also cast it to a string:
 
-## Deployment
+```ts
+const f1 = f(2,3);
+console.log(`${f1}`) // Outputs '2 / 3'
+```
 
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
