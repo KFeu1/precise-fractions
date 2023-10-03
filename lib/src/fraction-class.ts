@@ -20,6 +20,12 @@ export class Fraction {
     numerator: bigint;
     denominator: bigint;
 
+    /**
+     * Create a fraction
+     *
+     * @param numerator bigint | number | string
+     * @param denominator [bigint | number | string]
+     */
     constructor(numerator: bigint | number | string, denominator?: bigint | number | string) {
         if (typeof numerator !== "bigint") {
             numerator = BigInt(numerator);
