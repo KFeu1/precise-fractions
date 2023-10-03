@@ -1,5 +1,5 @@
 # What this library does
-It allows you to work with fractions, and keep their nominator and denominator values.
+It allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations.
 
 ## Usage
 
