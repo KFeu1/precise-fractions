@@ -1,5 +1,6 @@
 import { Fraction } from "./fraction-class";
 import { _toFraction } from "./helper";
+import { lcm } from "./utils";
 
 /**
  * Create a new fraction.
@@ -12,19 +13,6 @@ import { _toFraction } from "./helper";
  */
 function createFraction(numerator: bigint | number | string, denominator?: bigint | number | string) {
     return new Fraction(numerator, denominator);
-}
-
-function gcd(a: bigint, b: bigint) {
-    while (b !== 0n) {
-      const temp = b;
-      b = a % b;
-      a = temp;
-    }
-    return a;
-}
-
-function lcm(a: bigint, b: bigint) {
-    return a * b / gcd(a,b);
 }
 
 /**
@@ -125,6 +113,4 @@ export {
     multiply,
     divide,
     power,
-    gcd,
-    lcm,
 };

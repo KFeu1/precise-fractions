@@ -4,8 +4,8 @@ import {
     multiply as multiplyF,
     power as powerF,
     subtract as subtractF,
-    gcd,
 } from "./operations";
+import { gcd } from "./utils";
 
 /**
  * Represents a fraction with numerator and denominator.
