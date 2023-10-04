@@ -15,11 +15,12 @@ function createFraction(numerator: bigint | number | string, denominator?: bigin
 }
 
 function gcd(a: bigint, b: bigint) {
-    if (b === 0n) {
-      return a;
+    while (b !== 0n) {
+      const temp = b;
+      b = a % b;
+      a = temp;
     }
-
-    return gcd(b, a % b);
+    return a;
 }
 
 function lcm(a: bigint, b: bigint) {
