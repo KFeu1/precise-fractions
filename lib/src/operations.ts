@@ -24,10 +24,7 @@ function createFraction(numerator: bigint | number | string, denominator?: bigin
 function add(...fractions: [Fraction | bigint | number | string, ...Array<Fraction | bigint | number | string>]) {
     if (fractions.length === 1) return _toFraction(fractions[0]);
 
-    const f1 = _toFraction(fractions[0]);
-    const f2 = _toFraction(fractions[1]);
-
-    let newFraction = _add(f1, f2);
+    let newFraction = _add(fractions[0], fractions[1]);
 
     for (let i = 2; i < fractions.length; i++) {
         const f = _toFraction(fractions[i]);
@@ -37,7 +34,10 @@ function add(...fractions: [Fraction | bigint | number | string, ...Array<Fracti
     return newFraction;
 }
 
-function _add(f1: Fraction, f2: Fraction) {
+function _add(f1: Fraction | bigint | number | string, f2: Fraction | bigint | number | string) {
+    f1 = _toFraction(f1);
+    f2 = _toFraction(f2);
+
     const newDenominator = lcm(f1.denominator, f2.denominator);
     const factor1 = newDenominator / f1.denominator;
     const factor2 = newDenominator / f2.denominator;
@@ -53,7 +53,10 @@ function _add(f1: Fraction, f2: Fraction) {
 * @param f2 Fraction
 * @returns Fraction
 */
-function subtract(f1: Fraction, f2: Fraction) {
+function subtract(f1: Fraction | bigint | number | string, f2: Fraction | bigint | number | string) {
+    f1 = _toFraction(f1);
+    f2 = _toFraction(f2);
+
     const newDenominator = lcm(f1.denominator, f2.denominator);
     const factor1 = newDenominator / f1.denominator;
     const factor2 = newDenominator / f2.denominator;
@@ -88,7 +91,9 @@ function multiply(...fractions: [Fraction | bigint | number | string, ...Array<F
  * @param f2 Fraction
  * @returns Fraction
  */
-function divide(f1: Fraction, f2: Fraction) {
+function divide(f1: Fraction | bigint | number | string, f2: Fraction | bigint | number | string) {
+    f1 = _toFraction(f1);
+    f2 = _toFraction(f2);
     return new Fraction(f1.numerator * f2.denominator, f1.denominator * f2.numerator);
 }
 
@@ -99,10 +104,9 @@ function divide(f1: Fraction, f2: Fraction) {
  * @param power Exponent
  * @returns Fraction
  */
-function power(f: Fraction, power: bigint | number | string) {
-    if (typeof power !== "bigint") {
-        power = BigInt(power);
-    }
+function power(f: Fraction | bigint | number | string, power: bigint | number | string) {
+    f = _toFraction(f);
+    power = BigInt(power);
     return new Fraction(f.numerator ** power, f.denominator ** power);
 }
 

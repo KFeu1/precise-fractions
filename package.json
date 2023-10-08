@@ -2,7 +2,7 @@
   "name": "precise-fractions",
   "private": false,
   "author": "Konstantin Feuerborn",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "type": "module",
   "license": "MIT",
   "main": "dist/precise-fractions.js",
@@ -34,9 +34,10 @@
     "vite-plugin-solid": "^2.7.0"
   },
   "keywords": [
-    "Javascript",
     "Precise",
-    "Fractions"
+    "Exact",
+    "Fractions",
+    "Probability"
   ],
   "repository": {
     "type": "git",

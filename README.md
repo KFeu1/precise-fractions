@@ -1,5 +1,7 @@
 # What this library does
-It allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations - instead of converting decimals. Also, the precision level is arbitrarily large if you use bigints or strings when creating a fraction.
+This library allows you to work with precise fractions, by keeping their nominator and denominator values when doing operations - instead of converting decimals (but reducing them). Also, the precision level is arbitrarily large since, internally, bigints are used.
+
+This can be useful when you want to calculate probabilities, for example.
 
 ## Usage
 
@@ -79,3 +81,10 @@ const f1 = f(2,3);
 console.log(`${f1}`) // Outputs '2 / 3'
 ```
 
+You can of course also just access the numerator and denominator values:
+
+```ts
+const f1 = f(2,3);
+console.log(f1.numerator) // 2n
+console.log(f2.denominator) // 3n
+```
