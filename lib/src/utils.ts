@@ -8,7 +8,7 @@ function gcd(a: bigint, b: bigint) {
 }
 
 function lcm(a: bigint, b: bigint) {
-    return a * b / gcd(a,b);
+    return (a / gcd(a,b)) * b;
 }
 
 export {
