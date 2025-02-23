@@ -20,7 +20,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["node"]
+    "types": ["node"],
+    "declaration": true
   },
   "include": ["lib"],
   "references": [{ "path": "./tsconfig.node.json" }]

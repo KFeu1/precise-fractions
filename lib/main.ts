@@ -1,3 +1,5 @@
+export { gcd, lcm } from "./src/utils";
+
 export {
     createFraction,
     add,
