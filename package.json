@@ -2,19 +2,23 @@
   "name": "precise-fractions",
   "private": false,
   "author": "Konstantin Feuerborn",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "type": "module",
   "license": "MIT",
-  "main": "dist/precise-fractions.js",
-  "types": "dist/main.d.ts",
   "declaration": true,
   "files": [
     "dist/*"
   ],
   "exports": {
     ".": {
-      "import": "./dist/precise-fractions.js",
-      "require": "./dist/precise-fractions.umd.cjs"
+      "import": {
+        "types": "./dist/main.d.ts",
+        "default": "./dist/precise-fractions.js"
+      },
+      "require": {
+        "types": "./dist/main.d.ts",
+        "default": "./dist/precise-fractions.umd.cjs"
+      }
     }
   },
   "description": "Allows for working with fractions.",
