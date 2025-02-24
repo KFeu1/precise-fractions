@@ -1,7 +1,10 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['lib/main.ts'],  // Entry file
+  entry: {
+    index: 'lib/main.ts',
+    'utils/index': 'lib/src/utils.ts'
+  },
   outDir: 'dist',           // Output directory
   format: ['cjs', 'esm'],   // Output formats (CommonJS and ESModule)
   target: 'esnext',         // Target environment
