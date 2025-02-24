@@ -12,25 +12,25 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/precise-fractions.js"
+        "types": "./dist/main.d.ts",
+        "default": "./dist/main.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/precise-fractions.umd.cjs"
+        "types": "./dist/main.d.cts",
+        "default": "./dist/main.cjs"
       }
     }
   },
   "description": "Allows for working with fractions.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build": "tsup",
     "preview": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
-    "solid-js": "^1.7.12",
     "@types/node": "^20.8.2",
+    "solid-js": "^1.7.12",
+    "tsup": "^8.3.6",
     "typescript": "^5.2.2",
     "vite": "^4.4.10",
     "vite-plugin-dts": "^3.6.0",
