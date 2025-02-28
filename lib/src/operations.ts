@@ -27,8 +27,7 @@ function add(...fractions: [Fraction | bigint | number | string, ...Array<Fracti
     let newFraction = _add(fractions[0], fractions[1]);
 
     for (let i = 2; i < fractions.length; i++) {
-        const f = _toFraction(fractions[i]);
-        newFraction = _add(newFraction, f);
+        newFraction = _add(newFraction, fractions[i]);
     }
 
     return newFraction;

@@ -2,7 +2,7 @@
   "name": "precise-fractions",
   "private": false,
   "author": "Konstantin Feuerborn",
-  "version": "1.1.10",
+  "version": "1.2.0",
   "type": "module",
   "license": "MIT",
   "declaration": true,

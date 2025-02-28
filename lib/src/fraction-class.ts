@@ -109,4 +109,38 @@ export class Fraction {
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
     }
+
+    /**
+     * Check for equality after shortening the fraction
+     * 
+     * @param f 
+     * @returns 
+     */
+    equals(f: Fraction | bigint | number | string): boolean {
+        if (!(f instanceof Fraction)) {
+            f = new Fraction(f);
+        } else {
+            f = f.shorten(true);
+        }
+        const shortened = this.shorten(true);
+        return shortened.numerator === f.numerator && shortened.denominator === f.denominator;
+    }
+
+    /**
+     * Shortens the fraction to the smallest possible form.
+     * If using the methods provided by the libary, this is done automatically.
+     * 
+     * @param newInstance Whether to create a new instance of the fraction or to modify the current instance.
+     */
+    shorten(newInstance: true) : Fraction;
+    shorten(newInstance: false) : void;
+    shorten(newInstance: boolean) : Fraction | void;
+    shorten<T extends boolean | undefined = undefined>(newInstance?: T) : Fraction | void {
+        const f = new Fraction(this.numerator, this.denominator);
+        if (newInstance) {
+            return f;
+        }
+        this.numerator = f.numerator;
+        this.denominator = f.denominator;
+    }
 }

@@ -15,6 +15,8 @@ function App() {
   console.log(`${multiply(f,g,h)}`);
   f.multiply(2,2);
   console.log(`${f}`);
+  const xx = Math.random() > 0.5 ? true : false;
+  const x = f.shorten(xx);
 
   return (
     <>
