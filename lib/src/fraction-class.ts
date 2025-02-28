@@ -58,6 +58,7 @@ export class Fraction {
         const newFraction = addF(this, ...fractions);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
+        this.shorten(false);
     }
 
     /**
@@ -72,6 +73,7 @@ export class Fraction {
         const newFraction = subtractF(this, f);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
+        this.shorten(false);
     }
 
     /**
@@ -83,6 +85,7 @@ export class Fraction {
         const newFraction = multiplyF(this, ...fractions);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
+        this.shorten(false);
     }
 
     /**
@@ -97,6 +100,7 @@ export class Fraction {
         const newFraction = divideF(this, f);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
+        this.shorten(false);
     }
 
     /**
@@ -108,6 +112,7 @@ export class Fraction {
         const newFraction = powerF(this, p);
         this.numerator = newFraction.numerator;
         this.denominator = newFraction.denominator;
+        this.shorten(false);
     }
 
     /**
