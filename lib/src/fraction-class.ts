@@ -135,6 +135,7 @@ export class Fraction {
     shorten(newInstance: true) : Fraction;
     shorten(newInstance: false) : void;
     shorten(newInstance: boolean) : Fraction | void;
+    shorten(newInstance?: undefined) : void;
     shorten<T extends boolean | undefined = undefined>(newInstance?: T) : Fraction | void {
         const f = new Fraction(this.numerator, this.denominator);
         if (newInstance) {
